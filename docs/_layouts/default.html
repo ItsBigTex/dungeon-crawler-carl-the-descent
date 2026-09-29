@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <style>
+        body {
+            background: #0b0b0c;
+            color: #e0e0e0;
+            font-family: "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        #sidebar {
+            width: 260px;
+            background: #111;
+            border-right: 2px solid #b30000;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+        }
+        #content {
+            margin-left: 280px;
+            padding: 40px;
+            max-width: 900px;
+        }
+        h1, h2, h3 {
+            color: #ff3b3b;
+        }
+        a {
+            color: #9ecbff;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ff3b3b;
+        }
+        .section-title {
+            margin-top: 30px;
+            font-size: 1.2em;
+            color: #ff3b3b;
+            border-bottom: 1px solid #ff3b3b;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        {% include sidebar.html %}
+    </div>
+    <div id="content">
+        {{ content }}
+    </div>
+</body>
+</html>
